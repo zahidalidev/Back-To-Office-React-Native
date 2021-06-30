@@ -1,21 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
+// screens
+import Deconnexion from "./app/screens/Deconnexion"
+import Reservation from "./app/screens/Reservation"
+
+// components
+import AppDrawer from './app/components/AppDrawer';
+
+//config
+import colors from "./app/config/colors"
+
+const Stack = createDrawerNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Deconnexion"
+        drawerType={"front"}
+        overlayColor="transparent"
+        edgeWidth={100}
+        drawerStyle={{
+          backgroundColor: colors.white,
+          width: "60%"
+        }}
+        drawerContent={(props) => <AppDrawer {...props} />}
+      >
+        <Stack.Screen name="Deconnexion">{(props) => <Deconnexion {...props} />}</Stack.Screen>
+        <Stack.Screen name="Reservation">{(props) => <Reservation {...props} />}</Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
