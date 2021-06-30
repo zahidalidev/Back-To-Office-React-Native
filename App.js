@@ -5,6 +5,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 // screens
 import Deconnexion from "./app/screens/Deconnexion"
 import Reservation from "./app/screens/Reservation"
+import 'moment';
+import 'moment/locale/fr';
 
 // components
 import AppDrawer from './app/components/AppDrawer';
