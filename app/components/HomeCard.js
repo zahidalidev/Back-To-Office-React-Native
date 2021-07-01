@@ -62,6 +62,7 @@ function HomeCard({ data, index, showDetails }) {
                         alignItems: "center",
                         borderRadius: 5,
                         marginTop: RFPercentage(1),
+                        paddingBottom: RFPercentage(4),
                     }} >
                         {
                             data.details.map((item, index) =>
@@ -71,7 +72,7 @@ function HomeCard({ data, index, showDetails }) {
                                     backgroundColor: colors.white,
                                     justifyContent: "center",
                                     alignItems: "center",
-                                    marginTop: RFPercentage(2)
+                                    marginTop: RFPercentage(2),
                                 }} >
                                     <View style={{
                                         shadowColor: "#000",
