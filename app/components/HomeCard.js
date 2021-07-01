@@ -153,7 +153,22 @@ function HomeCard({ data, index, showDetails }) {
                             )
                         }
 
+                        <View style={{ marginTop: RFPercentage(2), flexDirection: "column", justifyContent: 'center', alignItems: 'flex-start' }}>
+                            <View style={{ flexDirection: "row", alignItems: 'center', justifyContent: 'flex-start' }} >
+                                <MaterialCommunityIcons name="cancel" color={colors.danger} size={RFPercentage(2.2)} />
+                                <Text style={{ marginLeft: RFPercentage(1), color: colors.grey }} >Place distanciation social</Text>
+                            </View>
+                            <View style={{ flexDirection: "row", alignItems: 'center', justifyContent: 'flex-start' }} >
+                                <Entypo name="cross" color={colors.black} size={RFPercentage(2.2)} />
+                                <Text style={{ marginLeft: RFPercentage(1), color: colors.grey }} >Place non disponible</Text>
+                            </View>
+                            <View style={{ flexDirection: "row", alignItems: 'center', justifyContent: 'flex-start' }} >
+                                <AntDesign name="check" color="green" color="green" size={RFPercentage(2.2)} />
+                                <Text style={{ marginLeft: RFPercentage(1), color: colors.grey }} >Place disponible</Text>
+                            </View>
+                        </View>
                     </View> : null}
+
 
         </View>
 

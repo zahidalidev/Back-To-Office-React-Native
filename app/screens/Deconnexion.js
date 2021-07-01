@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, StatusBar, Text, ScrollView } from 'react-native';
-import { Appbar } from 'react-native-paper';
+import { Appbar, Button } from 'react-native-paper';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import CalendarStrip from 'react-native-calendar-strip';
 import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons"
@@ -9,6 +9,7 @@ import colors from '../config/colors';
 import moment from 'moment';
 import HomeCard from '../components/HomeCard';
 import { useState } from 'react';
+import AppTextButton from '../components/common/AppTextButton';
 
 function Deconnexion(props) {
 
@@ -146,6 +147,18 @@ function Deconnexion(props) {
                         <HomeCard key={index} index={index} showDetails={() => handleShowDetails(index)} data={item} />
                     )
                 }
+
+                {/* show button conditionally */}
+                {
+                    cardData.map((item, index) => {
+                        return item.showDetails === true ?
+                            <View key={index} style={{ marginBottom: RFPercentage(5), marginTop: RFPercentage(2), width: "100%", alignItems: "center", justifyContent: "center" }} >
+                                <AppTextButton title="Reserver" onSubmit={() => console.log("Reserver pressed")} />
+                            </View> : null
+                    }
+                    )
+                }
+
             </ScrollView>
         </View>
     );
