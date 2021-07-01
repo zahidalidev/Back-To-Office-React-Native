@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, StatusBar, Text, ScrollView } from 'react-native';
-import { Appbar, Button } from 'react-native-paper';
+import { Appbar } from 'react-native-paper';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import CalendarStrip from 'react-native-calendar-strip';
-import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons"
-
-import colors from '../config/colors';
 import moment from 'moment';
+
+// components
 import HomeCard from '../components/HomeCard';
-import { useState } from 'react';
 import AppTextButton from '../components/common/AppTextButton';
+
+// config
+import colors from '../config/colors';
 
 function Deconnexion(props) {
 
@@ -121,7 +122,6 @@ function Deconnexion(props) {
                 style={{ height: 100, marginTop: -20 }}
                 calendarHeaderFormat={"MMM"}
                 showMonth={true}
-                // dayComponentHeight={50}
                 calendarColor={colors.primary}
                 calendarHeaderStyle={{ color: 'white', fontSize: 20 }}
                 dateNameStyle={{ fontSize: 20, marginTop: 10, color: colors.white }}
@@ -153,7 +153,7 @@ function Deconnexion(props) {
                     cardData.map((item, index) => {
                         return item.showDetails === true ?
                             <View key={index} style={{ marginBottom: RFPercentage(5), marginTop: RFPercentage(2), width: "100%", alignItems: "center", justifyContent: "center" }} >
-                                <AppTextButton title="Reserver" onSubmit={() => console.log("Reserver pressed")} />
+                                <AppTextButton title="Reserver" onSubmit={() => props.navigation.navigate('Reservation')} />
                             </View> : null
                     }
                     )
