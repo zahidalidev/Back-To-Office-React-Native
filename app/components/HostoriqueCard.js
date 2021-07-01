@@ -38,9 +38,9 @@ function HostoriqueCard({ data, index }) {
                         <Text style={{ marginLeft: RFPercentage(1), fontSize: RFPercentage(2.2), color: colors.grey }} >{data.subTitle}</Text>
                     </View>
                 </View>
-                <TouchableOpacity onPress={() => showDetails()} activeOpacity={0.5} >
+                <View  >
                     <Text style={{ color: colors.mediumGrey, fontSize: RFPercentage(2.4) }} >{data.description}</Text>
-                </TouchableOpacity>
+                </View>
             </View>
         </View>
 

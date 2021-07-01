@@ -57,10 +57,6 @@ function Historique(props) {
                 </View>
             </View>
 
-            <View style={{ position: "absolute", bottom: RFPercentage(3), marginTop: RFPercentage(2), width: "100%", alignItems: "center", justifyContent: "center" }} >
-                <AppTextButton title="Retour a la page daccueil" onSubmit={() => props.navigation.navigate('Deconnexion')} />
-            </View>
-
             {
                 data.map((item, index) =>
                     <HostoriqueCard key={index} data={item} index={index} />
