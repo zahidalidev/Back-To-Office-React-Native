@@ -119,16 +119,16 @@ function Deconnexion(props) {
                     }
                 }
                 scrollable
-                style={{ height: 100, marginTop: -20 }}
+                style={{ height: 110, marginTop: -20 }}
                 calendarHeaderFormat={"MMM"}
                 showMonth={true}
                 calendarColor={colors.primary}
                 calendarHeaderStyle={{ color: 'white', fontSize: 20 }}
-                dateNameStyle={{ fontSize: 20, marginTop: 10, color: colors.white }}
-                dateNumberStyle={{ flex: 1, color: 'white', fontSize: 18, marginBottom: 10, paddingLeft: 10, padding: 5, paddingRight: 10 }}
+                dateNameStyle={{ fontSize: RFPercentage(2), marginTop: 10, color: colors.white }}
+                dateNumberStyle={{ height: 50, flex: 1, color: 'white', fontSize: RFPercentage(2), marginBottom: 10, paddingLeft: 10, padding: 5, paddingRight: 10 }}
                 selectedDate={moment(new Date())}
-                highlightDateNameStyle={{ fontSize: 18, marginTop: 10, color: colors.white }}
-                highlightDateNumberStyle={{ marginBottom: 15, backgroundColor: colors.white, fontSize: 18, paddingLeft: 10, padding: 5, paddingRight: 10, borderRadius: 100, color: colors.black }}
+                highlightDateNameStyle={{ fontSize: RFPercentage(2), marginTop: 10, color: colors.white }}
+                highlightDateNumberStyle={{ marginBottom: 10, backgroundColor: colors.white, fontSize: RFPercentage(2), paddingLeft: 10, padding: 5, paddingRight: 10, borderRadius: 100, color: colors.black }}
                 iconContainer={{ flex: 0.1 }}
                 iconStyle={{ tintColor: colors.white }}
             />
