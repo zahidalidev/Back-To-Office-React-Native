@@ -35,7 +35,7 @@ function Reservation(props) {
                     </View>
                 </View>
                 <View style={{ marginTop: RFPercentage(2), flexDirection: 'row', width: "75%", justifyContent: "space-between", alignItems: "center" }} >
-                    <Text style={{ color: colors.primary, fontSize: RFPercentage(2.8) }} >Journee entiere</Text>
+                    <Text style={{ color: colors.primary, fontSize: RFPercentage(2.8) }} >Journée entière</Text>
                     <Switch thumbColor={journee ? colors.primary : colors.white} value={journee} onChange={() => setJournee(!journee)} />
                 </View>
 
@@ -45,13 +45,13 @@ function Reservation(props) {
                 </View>
 
                 <View style={{ marginTop: RFPercentage(1), flexDirection: 'row', width: "75%", justifyContent: "space-between", alignItems: "center" }} >
-                    <Text style={{ color: colors.primary, fontSize: RFPercentage(2.8) }} >Apres-midi</Text>
+                    <Text style={{ color: colors.primary, fontSize: RFPercentage(2.8) }} >Après-midi</Text>
                     <RadioButton onPress={() => setRadioButtonActive('apres')} status={radioButtonActive === 'apres' ? "checked" : "unchecked"} color={colors.primary} />
                 </View>
             </View>
 
             <View style={{ position: "absolute", bottom: RFPercentage(3), marginTop: RFPercentage(2), width: "100%", alignItems: "center", justifyContent: "center" }} >
-                <AppTextButton title="Reserver" onSubmit={() => props.navigation.navigate('Confirmation')} />
+                <AppTextButton title="Valider mon crénau" onSubmit={() => props.navigation.navigate('Confirmation')} />
             </View>
         </View>
     );

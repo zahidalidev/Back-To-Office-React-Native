@@ -18,8 +18,8 @@ function AppDrawer({ navigation }) {
             <TouchableOpacity style={{ marginTop: RFPercentage(3.4) }} onPress={() => handleNavigate("Reservation")} >
                 <Text style={{ fontSize: RFPercentage(2.3), color: active === "Reservation" ? colors.danger : colors.primary }} >Reservation</ Text>
             </ TouchableOpacity >
-            <TouchableOpacity style={{ marginTop: RFPercentage(3.4) }} onPress={() => handleNavigate("Reservation")} >
-                <Text style={{ fontSize: RFPercentage(2.3), color: active === "Reservation" ? colors.danger : colors.primary }} >Reservation</ Text>
+            <TouchableOpacity style={{ marginTop: RFPercentage(3.4) }} onPress={() => handleNavigate("Historique")} >
+                <Text style={{ fontSize: RFPercentage(2.3), color: active === "Historique" ? colors.danger : colors.primary }} >Historique</ Text>
             </ TouchableOpacity >
             <TouchableOpacity style={{ marginTop: RFPercentage(3.4) }} onPress={() => handleNavigate("Deconnexion")} >
                 <Text style={{ fontSize: RFPercentage(2.3), color: active === "Deconnexion" ? colors.danger : colors.primary }} >Deconnexion</ Text>

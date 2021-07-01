@@ -22,7 +22,7 @@ function Confirmation(props) {
 
             <View style={{ flex: 1, width: "100%", flexDirection: "column", justifyContent: "center", alignItems: 'center' }} >
                 <View style={{ marginTop: RFPercentage(-6), flexDirection: 'row', width: "75%", justifyContent: "center", alignItems: "center" }} >
-                    <Text style={{ color: colors.primary, fontSize: RFPercentage(2.8), fontWeight: "bold" }} >Votre reservation est bien confirmee</Text>
+                    <Text style={{ color: colors.primary, fontSize: RFPercentage(2.8), fontWeight: "bold" }} >Votre réservation est bien confirmée</Text>
                 </View>
                 <View style={{ marginTop: RFPercentage(5), flexDirection: 'row', width: "75%", justifyContent: "center", alignItems: "center" }} >
                     <Text style={{ color: colors.grey, fontSize: RFPercentage(3.2), fontWeight: "bold" }} >Lundi 19 Avril</Text>
@@ -31,17 +31,17 @@ function Confirmation(props) {
                     <Text style={{ color: colors.grey, fontSize: RFPercentage(3.2), fontWeight: "bold" }} >Open Space 1</Text>
                 </View>
                 <View style={{ marginTop: RFPercentage(2), flexDirection: 'row', width: "75%", justifyContent: "center", alignItems: "center" }} >
-                    <Text style={{ color: colors.grey, fontSize: RFPercentage(2.2) }} >1er etage</Text>
+                    <Text style={{ color: colors.grey, fontSize: RFPercentage(2.2) }} >1er étage</Text>
                 </View>
                 <View style={{ marginTop: RFPercentage(2), flexDirection: 'row', width: "75%", justifyContent: "center", alignItems: "center" }} >
-                    <Text style={{ color: colors.grey, fontSize: RFPercentage(2.2) }} >Toute la journee</Text>
+                    <Text style={{ color: colors.grey, fontSize: RFPercentage(2.2) }} >Toute la journée</Text>
                 </View>
             </View>
 
             <View style={{ position: "absolute", bottom: RFPercentage(3), marginTop: RFPercentage(2), width: "100%", alignItems: "center", justifyContent: "center" }} >
-                <AppTextButton backgroundColor={colors.grey} title="Annuler ma reservation" onSubmit={() => props.navigation.navigate('Annulation')} />
+                <AppTextButton backgroundColor={colors.grey} title="Annuler ma réservation" onSubmit={() => props.navigation.navigate('Annulation')} />
                 <View style={{ marginTop: RFPercentage(3), width: "100%", alignItems: "center", justifyContent: "center" }} >
-                    <AppTextButton title="Telecharger mon attestion" onSubmit={() => console.log('Telecharger mon attestion pressed')} />
+                    <AppTextButton title="Télécharger mon attestion" onSubmit={() => console.log('Télécharger mon attestion pressed')} />
                 </View>
             </View>
         </View>

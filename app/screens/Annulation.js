@@ -21,12 +21,12 @@ function Annulation(props) {
 
             <View style={{ flex: 1, width: "100%", flexDirection: "column", justifyContent: "center", alignItems: 'center' }} >
                 <View style={{ marginTop: RFPercentage(-6), flexDirection: 'row', width: "75%", justifyContent: "center", alignItems: "center" }} >
-                    <Text style={{ color: colors.primary, fontSize: RFPercentage(2.8), fontWeight: "bold" }} >Votre reservation a bien annule</Text>
+                    <Text style={{ color: colors.primary, fontSize: RFPercentage(2.8), fontWeight: "bold" }} >Votre réservation a bien été annulé</Text>
                 </View>
             </View>
 
             <View style={{ position: "absolute", bottom: RFPercentage(3), marginTop: RFPercentage(2), width: "100%", alignItems: "center", justifyContent: "center" }} >
-                <AppTextButton title="Retour a la page daccueil" onSubmit={() => props.navigation.navigate('Deconnexion')} />
+                <AppTextButton title="Retour à la page d'accueil" onSubmit={() => props.navigation.navigate('Deconnexion')} />
             </View>
         </View>
     );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, StatusBar, Text, ScrollView } from 'react-native';
+import { StyleSheet, View, StatusBar, Text, ScrollView, TouchableOpacity } from 'react-native';
 import { Appbar } from 'react-native-paper';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import CalendarStrip from 'react-native-calendar-strip';
@@ -13,7 +13,7 @@ import AppTextButton from '../components/common/AppTextButton';
 import colors from '../config/colors';
 
 function Deconnexion(props) {
-
+    const [currentComponent, setCurrentComponent] = useState("1er")
     const [cardData, setCardData] = useState([
         {
             id: 0,
@@ -133,10 +133,16 @@ function Deconnexion(props) {
                 iconStyle={{ tintColor: colors.white }}
             />
 
-            <View style={{ marginTop: RFPercentage(2), flexDirection: "row", alignItems: "center", justifyContent: "space-evenly" }} >
-                <Text style={{ fontSize: RFPercentage(2.2), color: colors.black }} >1er etage</Text>
-                <Text style={{ fontSize: RFPercentage(2.2), color: colors.grey }} >2eme etage</Text>
-                <Text style={{ fontSize: RFPercentage(2.2), color: colors.grey }} >4eme etage</Text>
+            <View style={{ marginTop: RFPercentage(3), flexDirection: "row", alignItems: "center", justifyContent: "space-evenly" }} >
+                <TouchableOpacity activeOpacity={0.7} onPress={() => setCurrentComponent('1er')} >
+                    <Text style={{ fontSize: RFPercentage(2.2), color: currentComponent == '1er' ? colors.grey : colors.mediumGrey, fontWeight: "bold" }} >1er étage</Text>
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.7} onPress={() => setCurrentComponent('2er')} >
+                    <Text style={{ fontSize: RFPercentage(2.2), color: currentComponent == '2er' ? colors.grey : colors.mediumGrey, fontWeight: "bold" }} >2eme étage</Text>
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.7} onPress={() => setCurrentComponent('4er')} >
+                    <Text style={{ fontSize: RFPercentage(2.2), color: currentComponent == '4er' ? colors.grey : colors.mediumGrey, fontWeight: "bold" }} >4eme étage</Text>
+                </TouchableOpacity>
             </View>
 
 
