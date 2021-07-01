@@ -6,6 +6,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Deconnexion from "./app/screens/Deconnexion"
 import Reservation from "./app/screens/Reservation"
 import Confirmation from "./app/screens/Confirmation"
+import Annulation from "./app/screens/Annulation"
 
 // imports for calendar
 import 'moment';
@@ -35,6 +36,7 @@ export default function App() {
         <Stack.Screen name="Deconnexion">{(props) => <Deconnexion {...props} />}</Stack.Screen>
         <Stack.Screen name="Reservation">{(props) => <Reservation {...props} />}</Stack.Screen>
         <Stack.Screen name="Confirmation">{(props) => <Confirmation {...props} />}</Stack.Screen>
+        <Stack.Screen name="Annulation">{(props) => <Annulation {...props} />}</Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

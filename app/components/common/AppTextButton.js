@@ -5,9 +5,9 @@ import { Button } from 'react-native-paper';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import colors from '../../config/colors';
 
-function AppTextButton({ title, onSubmit }) {
+function AppTextButton({ title, onSubmit, backgroundColor = colors.primary }) {
     return (
-        <Button color={colors.primary} onPress={() => onSubmit()} style={{
+        <Button color={backgroundColor} onPress={() => onSubmit()} style={{
             shadowColor: "#000",
             shadowOffset: {
                 width: 0,
@@ -18,7 +18,7 @@ function AppTextButton({ title, onSubmit }) {
             elevation: 4,
             flexDirection: "row",
             width: "80%",
-            backgroundColor: colors.primary,
+            backgroundColor: backgroundColor,
             padding: RFPercentage(1),
             justifyContent: "center",
             alignItems: "center",
